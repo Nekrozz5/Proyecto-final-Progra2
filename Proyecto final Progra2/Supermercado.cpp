@@ -1,5 +1,5 @@
 #include "Supermercado.h"
-
+/*
 Supermercado::Supermercado()
 {
     cajeroPrincipal = new Cajero(1, "Ana", 70000001, "Cajero");

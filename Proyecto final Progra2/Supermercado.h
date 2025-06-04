@@ -1,6 +1,9 @@
 #pragma once
+/*
 #include <iostream>
 #include <string>
+
+
 #include <vector>
 #include <thread> 
 #include "SingletonStock.h"
@@ -22,4 +25,6 @@ private:
     Cajero* cajeroPrincipal;
     Supervisor* supervisorPrincipal;
     void generarReportesFinales();
+
 };
+*/

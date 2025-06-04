@@ -2,7 +2,7 @@
 SingletonStock::SingletonStock() :SingletonStock(3)
 {
 }
-SingletonStock::SingletonStock(int cantidadMaxima) :SingletonStock(cantidadMaxima)
+SingletonStock::SingletonStock(int cantidadMaxima) :productos(cantidadMaxima)
 {
 
 }

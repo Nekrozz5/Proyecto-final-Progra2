@@ -12,7 +12,7 @@ private:
 private:
 	SingletonStock();
 public:
-	SingletonStock();
+	
 	SingletonStock(int cantidadMaxima);
 	~SingletonStock();
 	static SingletonStock& getInstance();
