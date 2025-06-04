@@ -1,5 +1,5 @@
+#include "Producto.h"
 
-#include "SingletonStock.h"
 
 Producto::Producto()
 {
