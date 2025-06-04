@@ -127,13 +127,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Cajero.cpp" />
     <ClCompile Include="Persona.cpp" />
     <ClCompile Include="Producto.cpp" />
     <ClCompile Include="Proyecto final Progra2.cpp" />
+    <ClCompile Include="SingletonStock.cpp" />
+    <ClCompile Include="Supervisor.cpp" />
+    <ClCompile Include="VectorGenerico.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Cajero.h" />
     <ClInclude Include="Persona.h" />
     <ClInclude Include="Producto.h" />
+    <ClInclude Include="SingletonStock.h" />
+    <ClInclude Include="Supervisor.h" />
+    <ClInclude Include="VectorGenerico.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
