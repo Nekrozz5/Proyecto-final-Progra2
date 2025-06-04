@@ -4,7 +4,7 @@ Producto::Producto()
 {
 }
 
-Producto::Producto(string nombre, int cantidad, int precio)
+Producto::Producto(string nombre, int cantidad, double precio)
 {
     this->nombre = nombre;
     this->cantidad = cantidad;
@@ -18,6 +18,11 @@ Producto::~Producto()
 int Producto::getCantidad()
 {
     return cantidad;
+}
+
+double Producto::getPrecio()
+{
+	return precio;
 }
 
 string Producto::toJson()

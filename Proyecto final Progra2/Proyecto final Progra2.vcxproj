@@ -132,6 +132,7 @@
     <ClCompile Include="Producto.cpp" />
     <ClCompile Include="Proyecto final Progra2.cpp" />
     <ClCompile Include="SingletonStock.cpp" />
+    <ClCompile Include="Supermercado.cpp" />
     <ClCompile Include="Supervisor.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -139,6 +140,7 @@
     <ClInclude Include="Persona.h" />
     <ClInclude Include="Producto.h" />
     <ClInclude Include="SingletonStock.h" />
+    <ClInclude Include="Supermercado.h" />
     <ClInclude Include="Supervisor.h" />
     <ClInclude Include="VectorGenerico.h" />
   </ItemGroup>
