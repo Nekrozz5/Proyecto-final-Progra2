@@ -1,4 +1,5 @@
-#include "Producto.h"
+
+#include "SingletonStock.h"
 
 Producto::Producto()
 {
@@ -35,3 +36,6 @@ string Producto::toJson()
 	json << "}";
 	return json.str();
 }
+
+
+

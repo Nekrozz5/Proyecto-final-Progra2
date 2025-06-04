@@ -17,7 +17,7 @@ public:
 	static SingletonStock& getInstance();
 	void registrarProducto(Producto* producto);
 	string toJson();
-	Producto* buscarProductoPorNombre(string nombre);
+	SingletonStock* buscarProductoPorNombre(string nombre);
 
 	
 };
