@@ -133,7 +133,6 @@
     <ClCompile Include="Proyecto final Progra2.cpp" />
     <ClCompile Include="SingletonStock.cpp" />
     <ClCompile Include="Supervisor.cpp" />
-    <ClCompile Include="VectorGenerico.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cajero.h" />
