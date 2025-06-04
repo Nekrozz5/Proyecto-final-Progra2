@@ -14,6 +14,7 @@ public:
 	void registrar(T* elemento);
 	T* operator[](int posicion);
 	int getCantidadActual();
+	int getCantidadMaxima();
 
 private:
 	int cantidadMaxima;
@@ -64,6 +65,12 @@ template<typename T>
 inline int VectorGenerico<T>::getCantidadActual()
 {
 	return cantidadActual;
+}
+
+template<typename T>
+inline int VectorGenerico<T>::getCantidadMaxima()
+{
+	return cantidadMaxima;
 }
 
 

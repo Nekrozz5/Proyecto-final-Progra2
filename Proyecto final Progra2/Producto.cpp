@@ -1,6 +1,8 @@
 #include "Producto.h"
 
 
+
+
 Producto::Producto()
 {
 }
@@ -25,9 +27,6 @@ double Producto::getPrecio()
 {
 	return precio;
 }
-
-
-
 
 string Producto::toJson()
 {

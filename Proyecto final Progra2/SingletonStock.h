@@ -1,6 +1,8 @@
 #pragma once
 #include"VectorGenerico.h"
 #include "Producto.h"
+#include <sstream>
+#include <fstream>
 using namespace std;
 
 class SingletonStock
