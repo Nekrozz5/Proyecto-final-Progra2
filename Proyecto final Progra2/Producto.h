@@ -6,7 +6,7 @@
 using namespace std;
 class Producto
 {
-protected:
+private:
 	string nombre;
 	int cantidad;
 	double precio;
