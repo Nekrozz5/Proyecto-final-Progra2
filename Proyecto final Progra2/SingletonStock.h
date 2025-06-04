@@ -7,17 +7,18 @@ using namespace std;
 
 class SingletonStock
 {
- private:
+private:
 	VectorGenerico<Producto> productos;
 private:
 	SingletonStock();
 public:
-	SingletonStock(int cantmaxima);
+	SingletonStock();
+	SingletonStock(int cantidadMaxima);
 	~SingletonStock();
 	static SingletonStock& getInstance();
 	void registrarProducto(Producto* producto);
 	string toJson();
-	SingletonStock* buscarProductoPorNombre(string nombre);
+	Producto* buscarProductoPorNombre(string nombre);
 
 	
 };

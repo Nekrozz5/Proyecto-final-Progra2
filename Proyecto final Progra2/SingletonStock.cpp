@@ -1,22 +1,36 @@
 #include "SingletonStock.h"
-SingletonStock::SingletonStock(int cantmaxima)
+SingletonStock::SingletonStock() :SingletonStock(3)
+{
+}
+SingletonStock::SingletonStock(int cantidadMaxima) :SingletonStock(cantidadMaxima)
 {
 
 }
 
 SingletonStock::~SingletonStock()
 {
+	 
 }
 
 SingletonStock& SingletonStock::getInstance()
 {
-	// TODO: Insertar una instrucción "return" aquí
+	static SingletonStock instancia;
+	return instancia;
 }
 
 void SingletonStock::registrarProducto(Producto* producto)
 {
+	if (buscarProductoPorNombre(producto->getNombre()) != nullptr) {
+		throw exception("Ya existe un usuario con el numero registrado");
+	}
+	productos.registrar(producto);
 }
-SingletonStock* SingletonStock::buscarProductoPorNombre(string nombre)
+Producto* SingletonStock::buscarProductoPorNombre(string nombre)
 {
+	for (int i = 0; i < productos.getCantidadActual(); i++) {
+		if (productos[i]->getNombre() == nombre) {
+			return productos[i];
+		}
+	}
 	return nullptr;
 }

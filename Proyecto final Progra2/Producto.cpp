@@ -26,6 +26,11 @@ double Producto::getPrecio()
 	return precio;
 }
 
+string Producto::getNombre()
+{
+	return nombre;
+}
+
 string Producto::toJson()
 {
 	stringstream json;

@@ -17,6 +17,7 @@ public:
 	~Producto();
 	int getCantidad();
 	double getPrecio();
+	string getNombre();
 	string toJson();
 
 
