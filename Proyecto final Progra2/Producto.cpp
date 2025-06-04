@@ -3,13 +3,15 @@
 
 Producto::Producto()
 {
+	nombre = "";
+	cantidad = 0;
 }
 
-Producto::Producto(string nombre, int cantidad, double precio)
+Producto::Producto(string nombre, int cantidad)
 {
     this->nombre = nombre;
     this->cantidad = cantidad;
-	this->precio = precio;
+	
 }
 
 Producto::~Producto()
@@ -21,10 +23,7 @@ int Producto::getCantidad()
     return cantidad;
 }
 
-double Producto::getPrecio()
-{
-	return precio;
-}
+
 
 string Producto::getNombre()
 {
@@ -35,9 +34,8 @@ string Producto::toJson()
 {
 	stringstream json;
 	json << "{";
-	json << "\"nombre\":" << nombre << ",";
-	json << "\"cantidad\":\"" << cantidad << "\",";
-	json << "\"precio\":"<<precio;
+	json << "\"nombre\":" << nombre <<"\",";
+	json << "\"cantidad\":"<<cantidad;
 	json << "}";
 	return json.str();
 }

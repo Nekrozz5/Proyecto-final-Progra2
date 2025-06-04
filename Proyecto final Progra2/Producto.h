@@ -9,14 +9,11 @@ class Producto
 private:
 	string nombre;
 	int cantidad;
-	double precio;
-
 public:
 	Producto();
-	Producto(string nombre, int cantidad, double precio);
+	Producto(string nombre, int cantidad);
 	~Producto();
 	int getCantidad();
-	double getPrecio();
 	string getNombre();
 	string toJson();
 
