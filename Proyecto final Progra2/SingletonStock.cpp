@@ -34,7 +34,7 @@ SingletonStock::SingletonStock(int cantidadMaxima) :productos(cantidadMaxima)
 
 SingletonStock::~SingletonStock()
 {
-	 
+	  
 }
 
 SingletonStock& SingletonStock::getInstance()

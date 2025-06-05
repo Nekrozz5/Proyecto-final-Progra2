@@ -1,48 +1,23 @@
 #include "Supermercado.h"
-/*
-Supermercado::Supermercado()
-{
-    cajeroPrincipal = new Cajero(1, "Ana", 70000001, "Cajero");
-    supervisorPrincipal = new Supervisor(2, "Pedro", 70000002, "Supervisor");
+#pragma once
+#include <mutex>
+
+// Declaración del mutex global
+extern std::mutex globalMutex;
+
+
+Supermercado::Supermercado() {
+    // Lanzar hilos
+    hiloCajero = std::thread(&Cajero::ejecutar, &cajero);
+    hiloSupervisor = std::thread(&Supervisor::ejecutar, &supervisor);
 }
 
-Supermercado::~Supermercado()
-{
-    delete cajeroPrincipal;
-    delete supervisorPrincipal;
-}
-
-void Supermercado::iniciarSimulacion(string archivoStockInicial, string archivoVentas, string archivoAdquisiciones)
-{
-    cout << "Iniciando simulacion del Supermercado...";
-
-    try {
-        //miStock.cargarStockInicial(archivoStockInicial);
-        cout << "Stock inicial cargado.\n";
-    }
-    catch (const runtime_error& e) {
-        cerr << "Error al cargar stock inicial: " << e.what() << endl;
-        return;
-    }
-
-    
-    /*thread hiloCajero(&Cajero::simularVentas, cajeroPrincipal, ref(miStock), archivoVentas);
-    thread hiloSupervisor(&Supervisor::simularAdquisiciones, supervisorPrincipal, ref(miStock), archivoAdquisiciones);
+Supermercado::~Supermercado() {
+    // Esperar a que terminen
     hiloCajero.join();
     hiloSupervisor.join();
 
-    cout << "\nSimulacion de ventas y adquisiciones terminada.\n";
-
-    generarReportesFinales();
-
-    cout << "Simulacion finalizada.\n";
+    // Mostrar el stock actualizado
+    std::cout << "Estado final del stock:\n";
+    std::cout << SingletonStock::getInstance().toJson() << std::endl;
 }
-
-void Supermercado::generarReportesFinales()
-{
-    cout << "--- Reportes Finales del Supermercado ---"<< endl;
-    cout << miStock.generarReporteStock();
-    cout << miStock.generarReporteProductosMasVendidos();
-    cout << miStock.generarReporteProductosMayorGanancia();
-}
-*/

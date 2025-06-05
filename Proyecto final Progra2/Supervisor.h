@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 
+#include"SingletonStock.h"
 using namespace std;
 class Supervisor 
 {

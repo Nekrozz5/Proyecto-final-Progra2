@@ -1,30 +1,17 @@
 #pragma once
-/*
-#include <iostream>
-#include <string>
-
-
-#include <vector>
-#include <thread> 
-#include "SingletonStock.h"
 #include "Cajero.h"
 #include "Supervisor.h"
-#include <fstream> 
+#include <thread>
 
-using namespace std;
 
-class Supermercado
-{
+class Supermercado {
+private:
+    Cajero cajero;
+    Supervisor supervisor;
+    std::thread hiloCajero;
+    std::thread hiloSupervisor;
+
 public:
     Supermercado();
     ~Supermercado();
-
-    void iniciarSimulacion(string archivoStockInicial, string archivoVentas, string archivoAdquisiciones);
-
-private:
-    Cajero* cajeroPrincipal;
-    Supervisor* supervisorPrincipal;
-    void generarReportesFinales();
-
 };
-*/
