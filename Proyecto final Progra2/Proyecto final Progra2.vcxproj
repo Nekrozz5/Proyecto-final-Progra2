@@ -128,7 +128,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Cajero.cpp" />
-    <ClCompile Include="MiHilo.cpp" />
     <ClCompile Include="Producto.cpp" />
     <ClCompile Include="Proyecto final Progra2.cpp" />
     <ClCompile Include="SingletonStock.cpp" />
@@ -137,7 +136,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cajero.h" />
-    <ClInclude Include="MiHilo.h" />
     <ClInclude Include="Producto.h" />
     <ClInclude Include="SingletonStock.h" />
     <ClInclude Include="Supermercado.h" />
