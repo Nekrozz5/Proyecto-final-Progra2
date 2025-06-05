@@ -24,7 +24,7 @@ Supervisor::~Supervisor()
 
 void Supervisor::ejecutar()
 {
-    //Producto* p = SingletonStock::getInstance().buscarProductoPorNombre(nombre);
+    
 
     cout << "Cajero procesando ventas..." << endl;
     ifstream archivo("adquisiciones.txt");
@@ -39,7 +39,7 @@ void Supervisor::ejecutar()
     float precio;
 
     while (archivo >> nombre >> cantidad >> precio) {
-        //lock_guard<mutex> lock(globalMutex); // Protege acceso al stock
+        
 
         Producto* p = SingletonStock::getInstance().buscarProductoPorNombre(nombre);
         if (p != nullptr) {

@@ -2,14 +2,14 @@
 #include "Cajero.h"
 #include "Supervisor.h"
 #include <thread>
-
+using namespace std;
 
 class Supermercado {
 private:
     Cajero cajero;
     Supervisor supervisor;
-    std::thread hiloCajero;
-    std::thread hiloSupervisor;
+    thread hiloCajero;
+    thread hiloSupervisor;
 
 public:
     Supermercado();
