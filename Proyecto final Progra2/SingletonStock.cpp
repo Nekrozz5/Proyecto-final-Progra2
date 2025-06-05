@@ -54,7 +54,7 @@ string SingletonStock::toJson() {
     stringstream json;
     json << "[";
     for (size_t i = 0; i <productos.getCantidadActual() ; ++i) {
-        json << productos[i]->toJson(); if (productos.getCantidadActual()-1)
+        json << productos[i]->toJson(); if (i<productos.getCantidadActual()-1)
         {
 			json << ",";
         }

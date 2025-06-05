@@ -34,7 +34,7 @@ string Producto::toJson()
 {
 	stringstream json;
 	json << "{";
-	json << "\"nombre\":" << nombre <<"\",";
+	json << "\"nombre\":\"" << nombre <<"\",";
 	json << "\"cantidad\":"<<cantidad;
 	json << "}";
 	return json.str();
