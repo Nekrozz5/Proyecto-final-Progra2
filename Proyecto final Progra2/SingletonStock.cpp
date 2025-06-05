@@ -24,6 +24,9 @@ SingletonStock::SingletonStock() :SingletonStock(10)
 
     archivo.close();
 }
+
+
+
 SingletonStock::SingletonStock(int cantidadMaxima) :productos(cantidadMaxima)
 {
 
