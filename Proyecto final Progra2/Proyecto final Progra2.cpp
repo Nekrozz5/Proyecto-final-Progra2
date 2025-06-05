@@ -9,4 +9,5 @@ int main() {
     cout << stock.toJson() << endl;
 
     return 0;
+    
 }

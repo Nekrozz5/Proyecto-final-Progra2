@@ -40,5 +40,13 @@ string Producto::toJson()
 	return json.str();
 }
 
+void Producto::incrementarCantidad(int cantidad) {
+	this->cantidad += cantidad;
+}
+
+void Producto::disminuirCantidad(int cantidad) {
+	this->cantidad -= cantidad;
+}
+
 
 

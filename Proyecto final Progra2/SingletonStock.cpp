@@ -17,7 +17,7 @@ SingletonStock::SingletonStock() :SingletonStock(10)
             registrarProducto(nuevoProducto);
         }
         catch (const exception& e) {
-            cerr << "Error al registrar producto: " << e.what() << endl;
+            cerr << "Error al registrar el producto '" << nombre << "'." << endl;
             delete nuevoProducto;
         }
     }

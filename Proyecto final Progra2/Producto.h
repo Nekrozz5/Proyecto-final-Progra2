@@ -16,7 +16,8 @@ public:
 	int getCantidad();
 	string getNombre();
 	string toJson();
-
+	void incrementarCantidad(int cantidad);
+	void disminuirCantidad(int cantidad);
 
 };
 

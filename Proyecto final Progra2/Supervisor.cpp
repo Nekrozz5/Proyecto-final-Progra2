@@ -4,11 +4,19 @@ Supervisor::Supervisor()
 {
 }
 
-Supervisor::Supervisor(int ci, string nombre, int celular, string cargo) :Persona(ci, nombre, celular, cargo)
+Supervisor::Supervisor(int ci, string nombre, int celular, string cargo) 
 {
+	this->ci = ci;
+	this->nombre = nombre;
+	this->celular = celular;
 	this->cargo = "Supervisor";
 }
 
 Supervisor::~Supervisor()
 {
 }
+
+
+
+
+

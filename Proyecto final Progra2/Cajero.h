@@ -1,12 +1,19 @@
 #pragma once
-#include "Persona.h"
+#include <iostream>
+#include <string>
 using namespace std;
-class Cajero :public Persona
+class Cajero 
 {
+private:
+	int ci;
+	string nombre;
+	int celular;
+	string cargo;
 public:
 	Cajero();
 	Cajero(int ci, string nombre, int celular, string cargo);
 	~Cajero();
+	void ejecutar();
 
 };
 

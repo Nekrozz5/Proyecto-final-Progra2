@@ -1,13 +1,21 @@
 #pragma once
-#include"Persona.h"
+#include <iostream>
+#include <string>
+
 using namespace std;
-class Supervisor :public Persona
+class Supervisor 
 {
+private:
+	int ci;
+	string nombre;
+	int celular;
+	string cargo;
 public: 
 	Supervisor();
 	Supervisor(int ci,string nombre,int celular,string cargo);
 	~Supervisor();
-	 
+	void ejecutar() ;
+
 
 };
 
