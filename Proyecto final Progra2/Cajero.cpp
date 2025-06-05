@@ -3,7 +3,11 @@
 #include <mutex>
 
 
+<<<<<<< HEAD
 
+=======
+// declarado extern si está fuera del Singleton
+>>>>>>> parent of ae0c67a (aaaaaaa)
 
 
 Cajero::Cajero()
@@ -16,10 +20,17 @@ Cajero::Cajero()
 
 Cajero::Cajero(int ci, string nombre, int celular, string cargo) 	
 {
+	
+	
 		this->ci = ci;
 		this->nombre = nombre;
 		this->celular = celular;
+<<<<<<< HEAD
 		this->cargo = "cajero";
+=======
+	
+	this->cargo = "cajero";
+>>>>>>> parent of ae0c67a (aaaaaaa)
 }
 
 Cajero::~Cajero()
@@ -27,7 +38,11 @@ Cajero::~Cajero()
 }
 
 void Cajero::ejecutar() {
+<<<<<<< HEAD
    
+=======
+   // Producto* p = SingletonStock::getInstance().buscarProductoPorNombre(nombre);
+>>>>>>> parent of ae0c67a (aaaaaaa)
 
     cout << "Cajero procesando ventas..." << endl;
     ifstream archivo("ventas.txt");
@@ -42,7 +57,11 @@ void Cajero::ejecutar() {
     float precio;
 
     while (archivo >> nombre >> cantidad >> precio) {
+<<<<<<< HEAD
         
+=======
+        //lock_guard<mutex> lock(globalMutex); // Protege acceso al stock
+>>>>>>> parent of ae0c67a (aaaaaaa)
 
         Producto* p = SingletonStock::getInstance().buscarProductoPorNombre(nombre);
         if (p != nullptr) {
