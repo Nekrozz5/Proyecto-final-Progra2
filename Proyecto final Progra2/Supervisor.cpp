@@ -26,7 +26,7 @@ void Supervisor::ejecutar()
 {
     
 
-    cout << "Cajero procesando ventas..." << endl;
+    cout << "Supervisor procesando ventas..." << endl;
     ifstream archivo("adquisiciones.txt");
 
     if (!archivo.is_open()) {
@@ -34,19 +34,28 @@ void Supervisor::ejecutar()
         return;
     }
 
-    string nombre;
+    string nombreProducto;
     int cantidad;
     float precio;
 
-    while (archivo >> nombre >> cantidad >> precio) {
+    while (archivo >> nombreProducto >> cantidad >> precio) {
         
 
-        Producto* p = SingletonStock::getInstance().buscarProductoPorNombre(nombre);
+        Producto* p = SingletonStock::getInstancia().buscarProductoPorNombre(nombre);
         if (p != nullptr) {
-            p->incrementarCantidad(cantidad); 
+            p->incrementarCantidad(cantidad);
+            cout << "Adquisicion: " << nombreProducto << " Cantidad: " << cantidad << " - Stock actual: " << p->getCantidad() << endl;
         }
         else {
-            cerr << "Producto no encontrado en stock: " << nombre << endl;
+            Producto* nuevoProducto = new Producto(nombreProducto, cantidad);
+            try {
+                SingletonStock::getInstancia().registrarProducto(nuevoProducto);
+                cout << "Nuevo producto adquirido y registrado: " << nombreProducto << " Cantidad: " << cantidad << endl;
+            }
+            catch (const exception& e) {
+                cerr << "Error al registrar el nuevo producto '" << nombreProducto << "': " << e.what() << endl;
+                delete nuevoProducto; 
+            }
         }
     }
 

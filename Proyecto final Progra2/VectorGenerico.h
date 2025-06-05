@@ -15,6 +15,7 @@ public:
 	T* operator[](int posicion);
 	int getCantidadActual();
 	int getCantidadMaxima();
+	void ordenar(bool (*comparar)(T*, T*));
 
 private:
 	int cantidadMaxima;

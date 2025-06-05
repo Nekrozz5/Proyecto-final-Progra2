@@ -3,9 +3,6 @@
 #include <mutex>
 
 
-// declarado extern si está fuera del Singleton
-
-
 Cajero::Cajero()
 {
     this->ci = 0;
@@ -17,13 +14,10 @@ Cajero::Cajero()
 Cajero::Cajero(int ci, string nombre, int celular, string cargo) 
 	
 {
-	
-	
 		this->ci = ci;
 		this->nombre = nombre;
 		this->celular = celular;
-	
-	this->cargo = "cajero";
+        this->cargo = "cajero";
 }
 
 Cajero::~Cajero()
@@ -31,8 +25,6 @@ Cajero::~Cajero()
 }
 
 void Cajero::ejecutar() {
-   // Producto* p = SingletonStock::getInstance().buscarProductoPorNombre(nombre);
-
     cout << "Cajero procesando ventas..." << endl;
     ifstream archivo("ventas.txt");
 
@@ -41,19 +33,25 @@ void Cajero::ejecutar() {
         return;
     }
 
-    string nombre;
+    string nombreProducto;
     int cantidad;
     float precio;
 
-    while (archivo >> nombre >> cantidad >> precio) {
-        //lock_guard<mutex> lock(globalMutex); // Protege acceso al stock
+    while (archivo >> nombreProducto >> cantidad >> precio) {
 
-        Producto* p = SingletonStock::getInstance().buscarProductoPorNombre(nombre);
+        Producto* p = SingletonStock::getInstancia().buscarProductoPorNombre(nombre);
         if (p != nullptr) {
-            p->disminuirCantidad(cantidad); // Supone que hay suficiente stock
+            if (p->getCantidad() >= cantidad) {
+                p->disminuirCantidad(cantidad);
+                p->agregarVenta(cantidad, precio); 
+                cout << "Cajero vendio " << cantidad << " unidades de " << nombreProducto << ". Stock restante: " << p->getCantidad() << endl;
+            }
+            else {
+                cout << " Stock insuficiente para " << nombreProducto << ". Cantidad disponible: " << p->getCantidad() << endl;
+            }
         }
         else {
-            cerr << "Producto no encontrado en stock: " << nombre << endl;
+            cout << "Producto " << nombreProducto << " no encontrado en el stock." << endl;
         }
     }
 

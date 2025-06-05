@@ -1,7 +1,6 @@
 #pragma once
 #include <iostream>
 #include <string>
-
 #include"SingletonStock.h"
 using namespace std;
 class Supervisor 
@@ -15,7 +14,7 @@ public:
 	Supervisor();
 	Supervisor(int ci,string nombre,int celular,string cargo);
 	~Supervisor();
-	void ejecutar() ;
+	void ejecutar();
 
 
 };

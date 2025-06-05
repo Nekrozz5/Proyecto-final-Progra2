@@ -1,6 +1,7 @@
 #include "Supermercado.h"
+#include <iostream>
 #include <mutex>
-
+using namespace std;
 
 mutex globalMutex;
 
@@ -18,5 +19,5 @@ Supermercado::~Supermercado() {
 
     
     cout << "Estado final del stock:\n";
-    cout << SingletonStock::getInstance().toJson() << std::endl;
+    cout << SingletonStock::getInstancia().toJson() << endl;
 }
